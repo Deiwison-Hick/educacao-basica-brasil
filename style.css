@@ -71,18 +71,17 @@ header {
 }
 
 .seta {
-  width: 220px;   /* comprimento menor */
-  height: 90px;   /* altura proporcional */
+  width: 220px;
+  height: 90px;
   background: url('images/seta.png') no-repeat center;
   background-size: contain;
   margin: 0 20px;
 }
 
 .grafico img {
-  width: 280px;  /* gráfico maior */
+  width: 280px;
   height: auto;
 }
-
 
 /* Container dos indicadores e público-alvo lado a lado com separador */
 .indicadores-publico-container {
@@ -174,4 +173,68 @@ header {
 
 .oval li {
   margin-bottom: 5px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .header-text p {
+    max-width: 100%;
+  }
+
+  .header-image img {
+    width: 180px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .projeto {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .seta {
+    display: none;
+  }
+
+  .grafico img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .indicadores-publico-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .indicadores-publico-container::before {
+    display: none;
+  }
+
+  .indicadores,
+  .publico-alvo {
+    padding: 0;
+    width: 100%;
+  }
+
+  .blocos {
+    justify-content: center;
+  }
+
+  .bloco {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .oval {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 300px;
+  }
 }
